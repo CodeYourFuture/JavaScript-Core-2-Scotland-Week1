@@ -13,5 +13,11 @@ let dog1 = {
 
 // Log the value of each property
 
-
+let dog2 = {
+    name: "Pat",
+    breed: "Poodle",
+    isHappy: false,
+    age: 8
+}
+console.log(dog2.isHappy)
 
