@@ -64,7 +64,7 @@ let restaurant1 = {
       // and returns the number of restaurants in this area.
       return restaurants
         .filter(r => r.address.area.includes(area))
-        .leng   
+        .length;
     },
   };
   
