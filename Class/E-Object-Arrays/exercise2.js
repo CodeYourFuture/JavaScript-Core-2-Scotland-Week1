@@ -31,15 +31,22 @@ let destination1 = {
 
 // 1. Write a function called isAbove300ByTrain 
 // It should have one input parameter called destination
-// It should return true if the distance is more than 300 kms away and reachable by train
+// It should return true if the distance is more than 300 kms away 
+//and reachable by train
 // otherwise return false
-
-
+ function isAbove300ByTrain(destination){
+   if(destination.distanceKms >= 300 && destination.transportations.includes("train")){
+     return true;
+   }else{
+     return false;
+   }
+ }
+console.log(isAbove300ByTrain(destination3));
 
 // 2. Use array.filter to create a new array with all the 
 // destination Objects more than 300 kms far away and reachable by train
-
+let result = travelDestinations.filter(isAbove300ByTrain);
 
 
 // 3. Print the new array of Objects to the screen
-
+console.log(result);

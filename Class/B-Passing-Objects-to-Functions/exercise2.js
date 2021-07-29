@@ -25,8 +25,18 @@ let student3 = {
 // set hasPassed to true and return the String 
 // "Student " + name + " has passed"
 // Otherwise return the String "Student " + name + " has failed"
-
+function getGrade(student){
+    if(student.attendance >= 90 && student.examScore > 60){
+        hasPassed = true;
+        return "Student " + student.name + " has passed";
+    }else{
+        return "Student " + student.name + " has failed";
+    }
+}
 
 // Call the function for each student and console.log the results
 
+console.log(getGrade(student1));
+console.log(getGrade(student2));
+console.log(getGrade(student3));
 

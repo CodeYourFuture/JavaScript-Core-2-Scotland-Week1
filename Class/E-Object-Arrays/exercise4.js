@@ -42,20 +42,29 @@ let restaurant1 = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
-    findAvailableRestaurants: function (numberOfPeople) {
+    findAvailableRestaurants : function (numberOfPeople) {
       // 1. Complete this method findAvailableRestaurants which takes a number of people in parameter 
       // and returns all the restaurant names which have the required number of seats available at the moment.
-
+     
+      return restaurants
+        .filter(r => (r.totalSeats - r.numberOfCustomers) > numberOfPeople)
+        .map(r => r.name);
+      
     },
     findRestaurantServingDish: function (dishName) {
       // 2. Complete this method findRestaurantServingDish which takes a dish name in parameter 
       // and returns all the restaurant names serving this dish.
-
+      return restaurants
+        .filter(r => r.menu.includes(dishName))
+        .map(r => r.name);
     },
     countNumberOfRestaurantsInArea: function (area) {
-      // 3. Complete this method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west), 
+      // 3. Complete this method countNumberOfRestaurantsInArea which takes 
+      //an area of Glasgow in parameter (center, west), 
       // and returns the number of restaurants in this area.
-      
+      return restaurants
+        .filter(r => r.address.area.includes(area))
+        .leng   
     },
   };
   
