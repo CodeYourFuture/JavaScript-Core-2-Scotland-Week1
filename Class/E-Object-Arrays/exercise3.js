@@ -20,12 +20,14 @@ let peopleList = [person1, person2, person3];
 // 1. Write a function called describePerson 
 // It should have one input parameter called person
 // It should return a String which says firstName + surname + " is the " + jobTitle
-
+function describePerson (person) {
+    return person.firstName + " "+ person.surname + " is the " + person.jobTitle;
+}
 
 
 // 2. Use array.map to create a new array of the descriptions
-
+let peopleJobsList = peopleList.map(describePerson);
 
 
 // 3. Print the new array to the screen
-
+console.log(peopleJobsList);
