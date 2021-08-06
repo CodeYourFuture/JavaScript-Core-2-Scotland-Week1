@@ -13,10 +13,10 @@ let dog1 = {
 // The properties of the object are all primitive types (String, number or boolean)
 // What is the type of each property?
 
+//string, string, boolean, integer
 
 // This is how we read a property
 console.log(dog1.breed);
 
 // Log the name of this dog
-
-
+console.log(dog1.name)

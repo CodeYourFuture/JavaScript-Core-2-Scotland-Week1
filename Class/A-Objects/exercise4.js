@@ -8,7 +8,10 @@ let dog1 = {
 
 // Write an "if" statement
 // If the dog is hungry, set isHungry to false and happiness to 10
-
+if (dog1.isHungry === true) {
+    dog1.isHungry = false;
+    dog1.happiness = 10;
+}
 
 
 console.log("Dog is hungry: " + dog1.isHungry);

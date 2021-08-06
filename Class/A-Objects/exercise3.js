@@ -2,7 +2,7 @@
 let food1 = {
     name: "Banana",
     type: "Fruit",
-    colour: "Red",
+    colour: "Yellow",
     calories: 105
 };
 
@@ -11,5 +11,6 @@ let food1 = {
 
 
 // Log the value of the Object's colour
+console.log (food1.colour);
 
 
