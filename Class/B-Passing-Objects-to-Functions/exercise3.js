@@ -8,7 +8,12 @@
 // "Failed, balance is now " + the account balance
 
 function withdrawFunds(customerAccount, amount){
-    // Write your answer here
+    if (customerAccount.accountBalance >= amount) {
+        customerAccount.accountBalance -= amount;
+        return "Success, balance is now " + customerAccount.accountBalance;
+    } else {
+        return "Failed, balance is now " + customerAccount.accountBalance;
+    }
 
 }
 

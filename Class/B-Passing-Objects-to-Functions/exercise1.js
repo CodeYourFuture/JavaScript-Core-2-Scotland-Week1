@@ -5,14 +5,14 @@ let satya = {
     surname: "Nadella",
     age: 53
 };
-let g1 = "Hello " + satya.firstName + " " + satya.surname;
+let g1 = "Hello " + satya.firstName + " " + satya.surname + " your age is " + satya.age;
 console.log(g1);
 
 
 // Here we have a function to do the same thing
 // Notice the object is passed to the input parameter called person
 function greet(person){
-    let greeting = "Hello " + person.firstName + " " + person.surname;
+    let greeting = "Hello " + person.firstName + " " + person.surname + " your age is " + person.age;
     return greeting;
 }
 
