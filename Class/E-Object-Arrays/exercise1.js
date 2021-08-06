@@ -42,10 +42,18 @@ console.log (isNear(destination4));
 
 // 2. Use array.filter to create a new array with all the 
 // destination Objects less than 400 Kms away
-function isNear(destination){
-  return destination.distanceKms <=400;
-  
+
+
+function isNear(destinationObjects){
+  return destinationObjects.distanceKms <400;
 }
-let result = destination.filter(isNear);
+let result = travelDestinations.filter(isNear);
+
+
 // 3. Print the new array of Objects to the screen
-console.log(destination.filter(isNear));
+function isDestination(place) { 
+  return place.travelDestinations.map(isDestination);
+}
+ console.log("Correct answer is ", isDestination);
+
+

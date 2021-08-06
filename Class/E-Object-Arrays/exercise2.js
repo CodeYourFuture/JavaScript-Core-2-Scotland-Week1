@@ -34,7 +34,7 @@ let destination1 = {
 // It should return true if the distance is more than 300 kms away and reachable by train
 // otherwise return false
 function isAbove300ByTrain(destination){
-  return destination.distanceKms >300;
+  return destination.distanceKms >=300 && transportations === "train";
 }
 console.log(isAbove300ByTrain(destination1));
 console.log(isAbove300ByTrain(destination2));
@@ -43,8 +43,12 @@ console.log(isAbove300ByTrain(destination4));
 
 // 2. Use array.filter to create a new array with all the 
 // destination Objects more than 300 kms far away and reachable by train
+function isAbove300ByTrain(destination){
+ return destination.distanceKms >=300 && transportations === "train";
+}
 
+let objectDestination = travelDestinations.transportations.filter(isAbove300ByTrain);
 
-
+console.log(objectDestination);
 // 3. Print the new array of Objects to the screen
 
