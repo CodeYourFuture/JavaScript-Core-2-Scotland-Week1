@@ -21,13 +21,18 @@ let peopleList = [person1, person2, person3];
 // It should have one input parameter called person
 // It should return a String which says firstName + surname + " is the " + jobTitle
 function describePerson(person){
-    return person = firstName + surname + " is the " + jobTitle
+    console.log(
+    `Hi my name is ${person.firstName} ${person.surname} is the ${person.jobTitle}`
+    );
 }
-console.log(describePerson);
-
 // 2. Use array.map to create a new array of the descriptions
 
-
+let persons = peopleList.map(describePerson);
 
 // 3. Print the new array to the screen
+function describePerson () {
+    persons.forEach(describePerson);
 
+}
+
+console.log(describePerson);
