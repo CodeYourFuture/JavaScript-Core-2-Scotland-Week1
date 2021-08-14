@@ -45,12 +45,24 @@ let restaurant1 = {
     findAvailableRestaurants: function (numberOfPeople) {
       // 1. Complete this method findAvailableRestaurants which takes a number of people in parameter 
       // and returns all the restaurant names which have the required number of seats available at the moment.
-
+      function availability(restaurant) {
+        if (numberOfPeople <= restaurant.totalSeats - restaurant.numberOfCustomers) {
+          return restaurant.name;
+        }
+      }
+      let availableRestaurants = restaurants.map(availability);
+      return availableRestaurants;
     },
     findRestaurantServingDish: function (dishName) {
       // 2. Complete this method findRestaurantServingDish which takes a dish name in parameter 
       // and returns all the restaurant names serving this dish.
-
+      function availableDish(restaurant) {
+        if (restaurants.menu.includes(dishName)){
+          return restaurant.name;
+        }
+      }
+      let dish = restaurants.map(availableDish);
+      return dish;
     },
     countNumberOfRestaurantsInArea: function (area) {
       // 3. Complete this method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west), 
