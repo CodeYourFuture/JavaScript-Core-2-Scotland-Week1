@@ -26,7 +26,17 @@ let student3 = {
 // "Student " + name + " has passed"
 // Otherwise return the String "Student " + name + " has failed"
 
+function scoreChecker (students) {
+    if (students.attendance >= 90 && students.examScore > 60) {
+        students.hasPassed = true;
+        return "student " + students.name + " has passed";
+    } else {
+        return "student " + students.name + " has failed";
+    }
+}
 
 // Call the function for each student and console.log the results
 
-
+console.log(scoreChecker(student1));
+console.log(scoreChecker(student2));
+console.log(scoreChecker(student3));

@@ -8,12 +8,15 @@ let currenciesList = ["BRL 800.00", "GBP 45.00", "EUR 64.32", "TRY 38.22", "INR 
 // It should return a String with only the amount
 // Do a search for "javascript substring" to help
 
-
+function extractAmount(parameter) {
+    return parameter.substring(4);
+}
 
 // 2. Use array.map to create a new array with the mapped values 
 
-
+let currency = currenciesList.map(extractAmount);
 
 
 // 3. Print the new array to the screen
 
+console.log(currency);
