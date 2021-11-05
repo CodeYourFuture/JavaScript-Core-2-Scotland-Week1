@@ -15,7 +15,7 @@ let dog1 = {
 
 
 // This is how we read a property
-console.log(dog1.breed);
+console.log(dog1.name);
 
 // Log the name of this dog
 

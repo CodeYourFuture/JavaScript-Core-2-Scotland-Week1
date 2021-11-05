@@ -42,11 +42,16 @@ let restaurant1 = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
-    findAvailableRestaurants: function (numberOfPeople) {
+    findAvailableRestaurants: 
       // 1. Complete this method findAvailableRestaurants which takes a number of people in parameter 
       // and returns all the restaurant names which have the required number of seats available at the moment.
+  
+    function findAvailableRestaurants(numberOfPeople) {
+      return restaurants.name + restaurants.totalSeats;
 
-    },
+    }
+    console.log(findAvailableRestaurants(numberOfPeople));
+
     findRestaurantServingDish: function (dishName) {
       // 2. Complete this method findRestaurantServingDish which takes a dish name in parameter 
       // and returns all the restaurant names serving this dish.
